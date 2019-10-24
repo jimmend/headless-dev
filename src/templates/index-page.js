@@ -65,18 +65,6 @@ export const pageQuery = graphql`
           title
           text
         }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-        }
       }
     }
   }
