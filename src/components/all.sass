@@ -1,7 +1,12 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import "~bulma"
 
-$primary-blue: #1b1464
+$primary-blue: rgba(4,100,179,70)
+$dark-blue: rgba(1,57,102,40)
+$light-blue: rgba(31,154,255,100)
+$dark-yellow: rgba(102,62,0,40)
+$light-yellow: rgba(179,110,4,70)
+$very-light-yellow: rgba(179,110,4,0.2)
 
 .logo
   font-weight: 700
@@ -11,9 +16,10 @@ $primary-blue: #1b1464
 
 .navbar-item
   font-weight: 600
+  color: $dark-blue
 
 .featured
-  background-color: $primary-blue
+  background-color: $dark-blue
   color: #fff
   
   h2
@@ -26,3 +32,14 @@ nav
 
 card
   background-color: #fff
+
+body
+  background-color: $very-light-yellow
+
+.icon
+  padding: 0 20px
+
+  a
+    color: #fff
+  a:hover
+    color: #999
