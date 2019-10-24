@@ -37,7 +37,6 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/jm-logo-180px.png`}
           color="#ff4400"
         />
-        <script src="https://kit.fontawesome.com/878a49801e.js" crossorigin="anonymous"></script>
         <meta name="theme-color" content="#fff" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />

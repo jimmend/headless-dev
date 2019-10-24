@@ -1,6 +1,9 @@
 import React from 'react'
 
 import logo from '../img/jimmendes-logo-white-32px.png'
+import facebook from '../img/facebook.svg'
+import linkedin from '../img/linkedin.svg'
+import pinterest from '../img/pinterest.svg'
 
 const Footer = class extends React.Component {
   render() {
@@ -14,21 +17,27 @@ const Footer = class extends React.Component {
           />
         </div>
         <div className="content has-text-centered">
-          <span className="icon">
-            <a href="#">
-              <i className="fab fa-linkedin-in"></i>
+            <a className="social-icons" href="#">
+              <img 
+                src={facebook}
+                alt="facebook"
+                style={{height: '20px'}}
+              />
             </a>
-          </span>
-          <span className="icon">
-            <a href="#">
-              <i className="fab fa-twitter"></i>
+            <a className="social-icons" href="#">
+              <img 
+                src={pinterest}
+                alt="pinterest"
+                style={{height: '20px'}}
+              />
             </a>
-          </span>
-          <span className="icon">
-            <a href="#">
-              <i className="fab fa-pinterest-p"></i>
+            <a className="social-icons" href="#">
+              <img 
+                src={linkedin}
+                alt="linkedin"
+                style={{height: '20px'}}
+              />
             </a>
-          </span>
         </div>
       </footer>
     )
