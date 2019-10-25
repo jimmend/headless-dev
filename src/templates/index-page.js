@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import FeaturedItems from '../components/FeaturedItems'
+import NewsletterSignup from '../components/NewsletterSignup'
+import SpotlightArticle from '../components/SpotlightArticle'
 
 export const IndexPageTemplate = ({
   featuredStories,
 }) => (
     <div>
-      <div className="row featured">
-        <section className="section section--gradient">
-          <div className="container">
-            <FeaturedItems gridItems={featuredStories} />
-          </div>
-        </section>
+      <div className="">
+        <div className="">
+          <NewsletterSignup />
+          <SpotlightArticle />
+        </div>
       </div>
     </div>
   )
