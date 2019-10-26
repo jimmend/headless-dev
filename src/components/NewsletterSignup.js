@@ -9,17 +9,17 @@ const NewsletterSignup = () => (
                 <p>Enter your information below.</p>
                 <div className="field">
                     <div className="control">
-                        <input class="input" type="text" placeholder="First Name" />
+                        <input className="input" type="text" placeholder="First Name" />
                     </div>
                 </div>
                 <div className="field">
                     <div className="control">
-                        <input class="input" type="text" placeholder="Last Name" />
+                        <input className="input" type="text" placeholder="Last Name" />
                     </div>
                 </div>
                 <div className="field has-addons">
                     <div className="control is-expanded">
-                        <input class="input" type="email" placeholder="Email Address" />
+                        <input className="input" type="email" placeholder="Email Address" />
                     </div>
                     <div className="control">
                         <button className="button is-link">Submit</button>
