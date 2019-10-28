@@ -8,6 +8,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import BlogSidebar from "../components/BlogSidebar";
+import SocialSharer from '../components/SocialSharer'
 
 export const BlogPostTemplate = ({
   content,
@@ -34,6 +35,7 @@ export const BlogPostTemplate = ({
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
+                <SocialSharer />
                 <PostContent content={content} />
                 {/* {tags && tags.length ? (
                   <div style={{ marginTop: `4rem` }}>
@@ -47,6 +49,7 @@ export const BlogPostTemplate = ({
                     </ul>
                   </div>
                       ) : null} */}
+                <SocialSharer />
                 <p className="byline">
                   Published by {author} on {date}
                 </p>
