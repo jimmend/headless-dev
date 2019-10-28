@@ -3,9 +3,52 @@
 
 $primary-blue: #021373
 $dark-blue: #273A73
-$yellow: #F2A81D
-$orange: #D97F11
-$red: #A64208
+$yellow: #f2a71d3a
+$orange: #d97f1138
+$red: #c03b3b
+
+.is-red
+  background-color: $red
+
+.is-blue
+  background-color: $primary-blue
+
+.is-white
+  background-color: #ffffff
+
+.horizontal-card
+  height: 100%
+  background-color: #fff
+  .card-image
+  .card-content
+    padding: 2rem
+    .super-title
+      margin-bottom: 1rem
+      .super-title-text
+      display: inline-block
+      background-color: $red
+      color: #ffffff
+      padding: 0.25rem 0.5rem
+      font-size: 0.8rem
+      font-weight: 600
+      text-transform: uppercase
+    .title
+      font-size: 1.5rem
+      font-weight: 600
+      margin-bottom: 1rem
+    .author
+      font-size: 0.75rem
+      text-transform: uppercase
+      font-weight: 600
+      margin-bottom: 1rem
+    .excerpt
+      margin-bottom: 1rem
+      p
+        margin-bottom: 1rem
+    .read-more
+
+.recent-articles
+  background-color: $orange
 
 .navbar-item
   font-weight: 600
@@ -14,17 +57,21 @@ $red: #A64208
 .navbar-burger
   color: #fff
 
-.section
+.front-page
   h2
-    font-size: 2em
+    font-size: 1.75em
     text-align: center
     margin-bottom: 1em
+    .section-title
+      color: #00000085
+      text-transform: uppercase
+      padding: 0.25rem 0.75rem 0.5rem 0.75rem
+      border: 1px solid #00000085
+      font-weight: 300
 
-.spotlight-article
-  .card-header-title
-    font-size: 1.5rem
-  .card-content
-    padding: 1rem
+.featured-article
+  background-color:#00000013
+  h2
 
 .section-dark
   h1, h2, h3, h4, h5, h6, label, p
@@ -37,11 +84,9 @@ $red: #A64208
 
 .newsletter-signup
   background-color: $dark-blue
-
   p
     text-align: center
     margin-bottom: 1rem
-
   h2
     margin-bottom: 1rem
 
@@ -52,28 +97,55 @@ $red: #A64208
 .footer
   padding-bottom: 3rem
 
-$break-lg: 1408px
-$break-md: 1216px
-$break-sm: 1024px
-
-@media screen and (min-width: $break-lg)
-  .container
-    max-width: 1200px
-
-@media screen and (min-width: $break-md)
-  .container
-    max-width: 1100px
-
-@media screen and (min-width: $break-sm)
-  .container
-    max-width: 1000px
-
 .coming-soon
   background-color: $dark-blue
   height: 100vh
-
   h1
     padding-top: 25vh
     color: #ffffff
     font-size: 3rem
     text-align: center
+
+.newsletter-signup
+  .button
+    background-color: $red
+    font-weight: 600
+  .button:hover
+    background-color: $primary-blue
+
+@media screen and (min-width: 1408px)
+  .container
+    max-width: 1152px;
+
+@media screen and (max-width: 1023px)
+  .navbar-menu
+    background-color: $dark-blue
+    color: #ffffff
+    box-shadow: none
+  footer
+    .navbar
+      margin-bottom: 1rem !important
+      .navbar-item
+        display: block !important
+
+footer
+  .navbar
+    background-color: #000
+    border-bottom: none
+    text-align: center
+    display: block
+    width: 100%
+    margin-bottom: 1rem !important
+    .navbar-item
+      display: inline-block
+  .content:not(:last-child)
+    margin-bottom: 0
+
+.blog-post
+  .byline
+    text-transform: uppercase
+    font-size: 0.9rem
+    font-weight: 600
+    margin-top: 1rem
+    padding-top: 0.5rem
+    border-top: 1px solid #00000085

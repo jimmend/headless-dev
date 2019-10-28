@@ -5,15 +5,17 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import NewsletterSignup from '../components/NewsletterSignup'
 import FeaturedArticle from '../components/FeaturedArticle'
+import RecentArticles from '../components/RecentArticles'
 
 export const IndexPageTemplate = ({
   featuredStories,
 }) => (
     <div>
       <div className="">
-        <div className="">
+        <div className="front-page">
           <NewsletterSignup />
           <FeaturedArticle />
+          <RecentArticles />
         </div>
       </div>
     </div>

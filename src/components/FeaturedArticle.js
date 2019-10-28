@@ -1,77 +1,100 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 
-class FeaturedArticle extends React.Component {
-    render() {
-
-        const { data } = this.props
-        const post = data.allMarkdownRemark.edges[0].node.frontmatter
-
-        return (
-            <section className="section spotlight-article">
-                <h2>Featured Article</h2>
-                <div className="container">
-                    <div className="card">
-                        <header className="card-header">
-                            <p className="card-header-title">{post.title}</p>
-                        </header>
-                        <div className="card-image">
-                            <figure className="image is-16x9">
-                                <img src="img/spotlight.jpg" alt="Spotlight Article" />
-                            </figure>
-                        </div>
-                        <div className="card-content">
-                            <div className="content">
-                                <p>By Jim Mendes | October 24, 2019</p>
-                                {post.html}
-                                <a href="https://www.jimmendes.com">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        )
-    }
-}
-
-FeaturedArticle.propTypes = {
-    data: PropTypes.shape({
-      allMarkdownRemark: PropTypes.shape({
-        edges: PropTypes.array,
-      }),
-    }),
-}
-
-export default () => (
-    <StaticQuery
-      query={graphql`
-        query FeaturedArticleQuery {
-          allMarkdownRemark(
-            sort: { order: DESC, fields: [frontmatter___date] }
-            filter: { frontmatter: { templateKey: { eq: "blog-post" }, featuredpost: { eq: true } } }
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                fields {
-                  slug
+const FeaturedArticle = () => {
+  const { allMarkdownRemark } = useStaticQuery(
+    graphql`
+      query FeaturedArticleQuery {
+        allMarkdownRemark(
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "blog-post" }
+              featuredpost: { eq: true }
+            }
+          }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              excerpt(pruneLength: 400, format: HTML)
+              html
+              frontmatter {
+                title
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
-                frontmatter {
-                  title
-                  templateKey
-                  date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage
-                }
+                author
+                date(formatString: "MMMM D, YYYY")
+                description
+                maincategory
               }
             }
           }
         }
-      `}
-      render={(data, count) => <FeaturedArticle data={data} count={count} />}
-    />
-  )
-  
+      }
+    `
+  );
+  return (
+    <section className="section featured-article">
+      <div className="container">
+        <h2><span className="section-title">Featured Article</span></h2>
+        <div className="columns is-gapless horizontal-card">
+          <div className="column card-image">
+            <Img
+              fluid={
+                allMarkdownRemark.edges[0].node.frontmatter.image
+                  .childImageSharp.fluid
+              }
+              alt="Photo"
+              style={{
+                position: "relative",
+                left: 0,
+                top: 0,
+                width: "100%",
+                height: "100%"
+              }}
+            ></Img>
+          </div>
+          <div className="column is-white">
+            <div className="card-content">
+              <div className="super-title">
+                <span className="super-title-text">{allMarkdownRemark.edges[0].node.frontmatter.maincategory}</span>
+              </div>
+              <div className="title">
+                {allMarkdownRemark.edges[0].node.frontmatter.title}
+              </div>
+              <div className="author">
+                BY {allMarkdownRemark.edges[0].node.frontmatter.author} |{" "}
+                {allMarkdownRemark.edges[0].node.frontmatter.date}
+              </div>
+              <div
+                className="excerpt"
+                dangerouslySetInnerHTML={{
+                  __html: allMarkdownRemark.edges[0].node.excerpt
+                }}
+              ></div>
+              <div className="read-more">
+                <Link
+                  className=""
+                  to={allMarkdownRemark.edges[0].node.fields.slug}
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FeaturedArticle;

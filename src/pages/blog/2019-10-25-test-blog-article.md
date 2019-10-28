@@ -1,18 +1,22 @@
 ---
 templateKey: blog-post
-title: This is a test blog post
+title: How to Use Outlook Rules to Take Control of Your Inbox
+author: Jim Mendes
+image: /img/spotlight.jpg
 date: 2019-10-25T16:33:00.000Z
 featuredpost: true
 featuredimage: /img/spotlight.jpg
-description: This is a test blog post.  Just trying to learn how GraphQL works.
+maincategory: Email Hacks
+description: You get tons of email.  Maybe 10% of that email is actually important.  Instead of manually deleting every frivolous email, use Outlook Rules to make you life easier.
 tags:
   - markdown
   - gatsby
   - learning
 ---
-![flavor wheel](/img/spotlight.jpg)
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. 
+
+Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.
 
 ## The beginning of section 2
 
