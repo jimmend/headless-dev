@@ -1,6 +1,8 @@
 /*eslint-disable */
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import NewsletterSignup from "../components/NewsletterSignup"
+import RecentArticlesSidebar from "../components/RecentArticlesSidebar"
 
 const BlogSidebar = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -44,7 +46,8 @@ const BlogSidebar = () => {
   );
   return (
     <div className="section blog-sidebar">
-        <h2>Blog Sidebar</h2>
+      <NewsletterSignup />
+      <RecentArticlesSidebar />
     </div>
   );
 };

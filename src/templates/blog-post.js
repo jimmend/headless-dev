@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column">
             <div className="columns">
-              <div className="column is-9">
+              <div className="column is-8-desktop is-7-tablet">
                 <PreviewCompatibleImage imageInfo={imageInfo} />
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
@@ -49,7 +49,6 @@ export const BlogPostTemplate = ({
                     </ul>
                   </div>
                       ) : null} */}
-                <SocialSharer />
                 <p className="byline">
                   Published by {author} on {date}
                 </p>

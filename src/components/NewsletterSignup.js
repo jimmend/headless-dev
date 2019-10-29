@@ -3,9 +3,9 @@ import React from "react";
 const NewsletterSignup = () => (
   <section className="section section-dark newsletter-signup">
     <div className="container">
-      <h2>Sign Up for the Newsletter</h2>
+      <p className="title">Sign Up for the Newsletter</p>
       <div className="columns">
-        <div className="column is-one-quarter-tablet"></div>
+        <div className="column is-one-quarter-tablet padding-column"></div>
         <div className="column">
           <p>Would you like to be notified when new stuff gets published?</p>
           <p>Enter your information below.</p>
@@ -19,21 +19,17 @@ const NewsletterSignup = () => (
               <input className="input" type="text" placeholder="Last Name" />
             </div>
           </div>
-          <div className="field has-addons">
-            <div className="control is-expanded">
-              <input
-                className="input"
-                type="email"
-                placeholder="Email Address"
-              />
-            </div>
+          <div className="field">
             <div className="control">
-              <button className="button is-link is-red">SUBMIT</button>
+              <input className="input" type="email" placeholder="Email Address" />
             </div>
           </div>
-          <p>No junk, no spam, no BS. Unsubscribe at any time.</p>
+          <div className="field is-clearfix">
+              <button className="button is-link is-red is-pulled-right">SUBMIT</button>
+          </div>
+          <p className="no-bs">No junk, no spam, no BS.<br/>Unsubscribe at any time.</p>
         </div>
-        <div className="column is-one-quarter-tablet"></div>
+        <div className="column is-one-quarter-tablet padding-column"></div>
       </div>
     </div>
   </section>
