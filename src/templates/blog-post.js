@@ -19,7 +19,8 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  imageInfo
+  imageInfo,
+  slug
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -35,7 +36,7 @@ export const BlogPostTemplate = ({
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
-                <SocialSharer />
+                <SocialSharer slug={slug} />
                 <PostContent content={content} />
                 {/* {tags && tags.length ? (
                   <div style={{ marginTop: `4rem` }}>
@@ -72,7 +73,8 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
   image: PropTypes.object,
   author: PropTypes.string,
-  date: PropTypes.string
+  date: PropTypes.string,
+  slug: PropTypes.string,
 };
 
 const BlogPost = ({ data }) => {
@@ -98,6 +100,7 @@ const BlogPost = ({ data }) => {
         imageInfo={post.frontmatter}
         author={post.frontmatter.author}
         date={post.frontmatter.date}
+        slug={post.fields.slug}
       />
     </Layout>
   );
@@ -116,6 +119,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
