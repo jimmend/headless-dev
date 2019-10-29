@@ -24,7 +24,6 @@ const SocialSharer = (data) => {
   const url = `http://www.jimmendes.com${data.slug}`
   return (
     <div className="social-sharer">
-    <p>{url}</p>
     <p className="title"><span className="title-box">Share This Article</span></p>
     <LinkedinShareButton url={url} className="inline">
       <LinkedinIcon size={32} round />
