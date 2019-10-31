@@ -12,12 +12,12 @@ const NewsletterSignup = () => (
           <form netlify name="newsletter-signup">
             <div className="field">
               <div className="control">
-                <input className="input" type="text" placeholder="First Name" />
+                <input className="input" type="text" placeholder="First Name" name="firstName"/>
               </div>
             </div>
             <div className="field">
               <div className="control">
-                <input className="input" type="text" placeholder="Last Name" />
+                <input className="input" type="text" placeholder="Last Name" name="lastName" />
               </div>
             </div>
             <div className="field">
@@ -26,6 +26,7 @@ const NewsletterSignup = () => (
                   className="input"
                   type="email"
                   placeholder="Email Address"
+                  name="email"
                 />
               </div>
             </div>
