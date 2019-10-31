@@ -1,5 +1,15 @@
 import React from "react";
 
+const encode = (data) => {
+  const formData = new FormData()
+
+  for (const key of Object.keys(data)) {
+    formData.append(key, data[key])
+  }
+
+  return formData
+}
+
 const handleSubmit = (e) => {
   e.preventDefault()
   const form = e.target
