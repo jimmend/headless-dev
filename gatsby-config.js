@@ -59,7 +59,7 @@ module.exports = {
         ],
       },
     },
-    {
+    /*{
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.jimmendes.com',
@@ -69,7 +69,7 @@ module.exports = {
         }]
       }
     },
-    /*{
+    {
       resolve: 'gatsby-plugin-sitemap',
       options: {
         output: '/sitemap.xml'
