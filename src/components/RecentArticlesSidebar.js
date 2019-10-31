@@ -1,9 +1,8 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import RecentArticle from "../components/RecentArticle";
+//import { useStaticQuery, graphql } from "gatsby";
 
 const RecentArticlesSidebar = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+/*   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query RecentArticlesSidebarQuery {
         allMarkdownRemark(
@@ -42,22 +41,13 @@ const RecentArticlesSidebar = () => {
         }
       }
     `
-  );
+  ); */
   return (
-    <section className="section recent-articles">
+    <section className="section">
       <div className="container">
         <h2>
-          <span className="section-title">Recent Articles</span>
+          <span className="section-title">Popular Articles</span>
         </h2>
-        <div className="recent-article-sidbar">
-          <RecentArticle article={allMarkdownRemark.edges[0].node} />
-        </div>
-        <div className="recent-article-sidbar">
-          <RecentArticle article={allMarkdownRemark.edges[1].node} />
-        </div>
-        <div className="recent-article-sidbar">
-          <RecentArticle article={allMarkdownRemark.edges[2].node} />
-        </div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const FeaturedArticle = () => {
   const { allMarkdownRemark } = useStaticQuery(
@@ -17,16 +17,16 @@ const FeaturedArticle = () => {
           edges {
             node {
               id
+              excerpt(pruneLength: 400, format: HTML)
+              html
               fields {
                 slug
               }
-              excerpt(pruneLength: 400, format: HTML)
-              html
               frontmatter {
                 title
                 image {
                   childImageSharp {
-                    fluid(maxWidth: 1000) {
+                    fluid {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -48,20 +48,12 @@ const FeaturedArticle = () => {
         <h2><span className="section-title">Featured Article</span></h2>
         <div className="columns is-gapless horizontal-card">
           <div className="column card-image">
-            <Img
-              fluid={
-                allMarkdownRemark.edges[0].node.frontmatter.image
-                  .childImageSharp.fluid
-              }
-              alt="Photo"
-              style={{
-                position: "relative",
-                left: 0,
-                top: 0,
-                width: "100%",
-                height: "100%"
-              }}
-            ></Img>
+            <PreviewCompatibleImage 
+              imageInfo={allMarkdownRemark.edges[0].node.frontmatter}
+              orientation="landscape"
+              hAlign="right"
+              vAlign="bottom"
+            />
           </div>
           <div className="column is-white">
             <div className="card-content">

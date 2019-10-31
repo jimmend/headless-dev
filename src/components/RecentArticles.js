@@ -20,11 +20,11 @@ const RecentArticles = () => {
           edges {
             node {
               id
+              excerpt(pruneLength:300, format:HTML)
+              html
               fields {
                 slug
               }
-              excerpt(pruneLength:150, format:HTML)
-              html
               frontmatter {
                 title
                 image {
@@ -56,9 +56,9 @@ const RecentArticles = () => {
           <div className="column">
             <RecentArticle article={allMarkdownRemark.edges[1].node}/>
           </div>
-          <div className="column is-hidden-tablet-only">
+          {/*<div className="column is-hidden-tablet-only">
             <RecentArticle article={allMarkdownRemark.edges[2].node}/>
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>

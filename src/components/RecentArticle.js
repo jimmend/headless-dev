@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
 
 const RecentArticle = (data) => {
   return (
     <div className="horizontal-card">
-        <Img
-        fluid={
-          data.article.frontmatter.image.childImageSharp.fluid
-        }
-        alt="Photo"
-      ></Img>
+        <PreviewCompatibleImage
+          imageInfo={data.article.frontmatter} 
+        />
       <div className="card-content">
           <div className="super-title">
             <span className="super-title-text">{data.article.frontmatter.maincategory}</span>
@@ -25,7 +22,7 @@ const RecentArticle = (data) => {
         <div
           className="excerpt"
           dangerouslySetInnerHTML={{
-            __html: data.article.excerpt
+            __html: data.article.frontmatter.description
           }}
         ></div>
         <div className="read-more">

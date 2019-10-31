@@ -2,22 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: '0' }
+const PreviewCompatibleImage = ({ imageInfo, orientation = "portrait", hAlign = "center", vAlign = "center"  }) => {
+  
   const { alt = '', childImageSharp, image } = imageInfo
+  const wrapperStyles = (orientation === "landscape") ? { height: "100%" } : {}
+  const imgStyles = { objectPosition: `${hAlign} ${vAlign}`}
+  console.log(`imgStyles: ${imgStyles}`)
 
   if (!!image && !!image.childImageSharp) {
     return (
-      <Img style={imageStyle} fluid={image.childImageSharp.fluid} alt={alt} />
+      <Img 
+        fluid={image.childImageSharp.fluid} 
+        alt={alt}
+        style={wrapperStyles}
+        imgStyle={imgStyles}
+      />
     )
   }
 
   if (!!childImageSharp) {
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return <Img fluid={childImageSharp.fluid} alt={alt} style={wrapperStyles} imgStyle={imgStyles} />
   }
 
   if (!!image && typeof image === 'string')
-    return <img style={imageStyle} src={image} alt={alt} />
+    return <img src={image} alt={alt} style={wrapperStyles} />
 
   return null
 }
@@ -29,6 +37,8 @@ PreviewCompatibleImage.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     style: PropTypes.object,
   }).isRequired,
+  orientation: PropTypes.string,
+  align: PropTypes.string,
 }
 
 export default PreviewCompatibleImage

@@ -1,16 +1,18 @@
 ---
 templateKey: blog-post
-title: Making sense of the SCAA’s new Flavor Wheel
-date: 2016-12-17T15:04:10.000Z
+title: How to Quickly and Easily Remove Outlook Duplicate Emails
+date: 2019-09-28T15:04:10.000Z
 author: Jim Mendes
 image: /img/spotlight.jpg
 featuredpost: false
 featuredimage: /img/spotlight.jpg
-maincategory: Email Hacks
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+maincategory: Outlook Hacks
+slug: quickly-and-easily-remove-outlook-duplicate-emails
+description: You don't need to purchase a special piece of software to remove your Outlook duplicate emails, just use this simple process.  Easy, peasy, lemon squeezy.
 tags:
-  - flavor
-  - tasting
+  - Outlook
+  - Email
+  - Duplicates
 ---
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 

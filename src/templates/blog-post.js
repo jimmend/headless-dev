@@ -25,18 +25,21 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section blog-post">
+    <section className="section">
       {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column">
             <div className="columns">
-              <div className="column is-8-desktop is-7-tablet">
+              <div className="column is-8-desktop is-7-tablet blog-post">
                 <PreviewCompatibleImage imageInfo={imageInfo} />
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
                   {title}
                 </h1>
                 <SocialSharer slug={slug} />
+                <p className="byline">
+                  By {author} | {date}
+                </p>
                 <PostContent content={content} />
                 {/* {tags && tags.length ? (
                   <div style={{ marginTop: `4rem` }}>
@@ -50,9 +53,6 @@ export const BlogPostTemplate = ({
                     </ul>
                   </div>
                       ) : null} */}
-                <p className="byline">
-                  Published by {author} on {date}
-                </p>
               </div>
               <div className="column">
                 <BlogSidebar />

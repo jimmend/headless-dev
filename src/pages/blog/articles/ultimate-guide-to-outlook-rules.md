@@ -1,17 +1,18 @@
 ---
 templateKey: blog-post
-title: How to Use Outlook Rules to Take Control of Your Inbox
+title: The Ultimate Guide to Outlook Rules
 author: Jim Mendes
-image: /img/spotlight.jpg
+image: /img/email.jpg
 date: 2019-10-25T16:33:00.000Z
 featuredpost: true
 featuredimage: /img/spotlight.jpg
-maincategory: Email Hacks
-description: You get tons of email.  Maybe 10% of that email is actually important.  Instead of manually deleting every frivolous email, use Outlook Rules to make you life easier.
+maincategory: Own Your Email
+description: Use Outlook Rules to make your email (and your life) easier.
+slug: ultimate-guide-to-outlook-rules
 tags:
-  - markdown
-  - gatsby
-  - learning
+  - email
+  - outlook
+  - productivity
 ---
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. 
