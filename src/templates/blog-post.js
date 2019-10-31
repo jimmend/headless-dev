@@ -56,7 +56,7 @@ export const BlogPostTemplate = ({
                       ) : null} */}
               </div>
               <div className="column">
-                <BlogSidebar postId={id} />
+                <BlogSidebar postId={slug} />
               </div>
             </div>
           </div>
