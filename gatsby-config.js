@@ -60,6 +60,23 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.jimmendes.com',
+        sitemap: 'https://www.jimmendes.com/sitemap.xml',
+        policy: [{
+          userAgent: '*',
+          disallow: ['/']
+        }]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap.xml'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,

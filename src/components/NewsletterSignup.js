@@ -27,7 +27,7 @@ const NewsletterSignup = () => (
           <div className="field is-clearfix">
               <button className="button is-link is-red is-pulled-right">SUBMIT</button>
           </div>
-          <p className="no-bs">No junk, no spam, no BS.<br/>Unsubscribe at any time.</p>
+          <p className="no-bs">Unsubscribe at any time. No junk, no spam, no BS.</p>
         </div>
         <div className="column is-one-quarter-tablet padding-column"></div>
       </div>
