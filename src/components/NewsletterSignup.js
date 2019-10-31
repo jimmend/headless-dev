@@ -1,5 +1,19 @@
 import React from "react";
 
+const handleSubmit = (e) => {
+  e.preventDefault()
+  const form = e.target
+  fetch('/', {
+    method: 'POST',
+    body: encode({
+      'form-name': form.getAttribute('name'),
+      ...this.state,
+    }),
+  })
+    .then(() => navigate(form.getAttribute('action')))
+    .catch(error => alert(error))  
+}
+
 const NewsletterSignup = () => (
   <section className="section section-dark newsletter-signup">
     <div className="container">
@@ -12,7 +26,9 @@ const NewsletterSignup = () => (
           <form 
             name="newsletter-signup" 
             data-netlify="true"
-            data-netlify-honeypot="bot-field" 
+            data-netlify-honeypot="bot-field"
+            action="/contact/thanks/"
+            onSubmit={handleSubmit} 
             method="post">
             <div className="field">
               <div className="control">
