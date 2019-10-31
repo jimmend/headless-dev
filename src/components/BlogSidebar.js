@@ -46,7 +46,7 @@ const BlogSidebar = () => {
   );
   return (
     <div className="section blog-sidebar">
-      {/* <NewsletterSignup /> */}
+      <NewsletterSignup />
       <RecentArticlesSidebar />
     </div>
   );
