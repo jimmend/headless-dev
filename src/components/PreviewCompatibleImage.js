@@ -7,7 +7,6 @@ const PreviewCompatibleImage = ({ imageInfo, orientation = "portrait", hAlign = 
   const { alt = '', childImageSharp, image } = imageInfo
   const wrapperStyles = (orientation === "landscape") ? { height: "100%" } : {}
   const imgStyles = { objectPosition: `${hAlign} ${vAlign}`}
-  console.log(`imgStyles: ${imgStyles}`)
 
   if (!!image && !!image.childImageSharp) {
     return (

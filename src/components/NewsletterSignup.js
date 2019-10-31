@@ -10,7 +10,8 @@ function encode(data) {
 export default class NewsletterSignup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isValidated: false };
+    const postId = props.postId || "front-page"
+    this.state = { isValidated: false, postId: postId };
   }
 
   handleChange = e => {
@@ -45,7 +46,7 @@ export default class NewsletterSignup extends React.Component {
               </p>
               <p>Enter your information below.</p>
               <form
-                name="newsletter-signup"
+                name={`newsletter-signup-${this.state.postId}`}
                 method="post"
                 action="/contact/thanks/"
                 data-netlify="true"

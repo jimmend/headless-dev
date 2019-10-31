@@ -20,7 +20,8 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   imageInfo,
-  slug
+  slug,
+  id
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -55,7 +56,7 @@ export const BlogPostTemplate = ({
                       ) : null} */}
               </div>
               <div className="column">
-                <BlogSidebar />
+                <BlogSidebar postId={id} />
               </div>
             </div>
           </div>
@@ -75,6 +76,7 @@ BlogPostTemplate.propTypes = {
   author: PropTypes.string,
   date: PropTypes.string,
   slug: PropTypes.string,
+  id: PropTypes.string,
 };
 
 const BlogPost = ({ data }) => {
@@ -101,6 +103,7 @@ const BlogPost = ({ data }) => {
         author={post.frontmatter.author}
         date={post.frontmatter.date}
         slug={post.fields.slug}
+        id={post.id}
       />
     </Layout>
   );
