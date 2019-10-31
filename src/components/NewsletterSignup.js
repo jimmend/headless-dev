@@ -9,25 +9,35 @@ const NewsletterSignup = () => (
         <div className="column">
           <p>Would you like to be notified when new stuff gets published?</p>
           <p>Enter your information below.</p>
-          <div className="field">
-            <div className="control">
-              <input className="input" type="text" placeholder="First Name" />
+          <form netlify name="newsletter-signup">
+            <div className="field">
+              <div className="control">
+                <input className="input" type="text" placeholder="First Name" />
+              </div>
             </div>
-          </div>
-          <div className="field">
-            <div className="control">
-              <input className="input" type="text" placeholder="Last Name" />
+            <div className="field">
+              <div className="control">
+                <input className="input" type="text" placeholder="Last Name" />
+              </div>
             </div>
-          </div>
-          <div className="field">
-            <div className="control">
-              <input className="input" type="email" placeholder="Email Address" />
+            <div className="field">
+              <div className="control">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="Email Address"
+                />
+              </div>
             </div>
-          </div>
-          <div className="field is-clearfix">
-              <button className="button is-link is-red is-pulled-right">SUBMIT</button>
-          </div>
-          <p className="no-bs">Unsubscribe at any time. No junk, no spam, no BS.</p>
+            <div className="field is-clearfix">
+              <button type="submit" className="button is-link is-red is-pulled-right">
+                SUBMIT
+              </button>
+            </div>
+          </form>
+          <p className="no-bs">
+            Unsubscribe any time. No junk, spam or BS.
+          </p>
         </div>
         <div className="column is-one-quarter-tablet padding-column"></div>
       </div>
