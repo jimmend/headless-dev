@@ -9,7 +9,7 @@ const NewsletterSignup = () => (
         <div className="column">
           <p>Would you like to be notified when new stuff gets published?</p>
           <p>Enter your information below.</p>
-          <form netlify name="newsletter-signup">
+          <form netlify name="newsletter-signup" method="POST">
             <div className="field">
               <div className="control">
                 <input className="input" type="text" placeholder="First Name" name="firstName"/>
