@@ -69,13 +69,14 @@ module.exports = {
           disallow: ['/']
         }]
       }
-    },
-    {
+    }
+    //,
+    /*{
       resolve: 'gatsby-plugin-sitemap',
       options: {
         output: '/sitemap.xml'
       }
-    },
+    }*/,
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
