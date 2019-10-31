@@ -17,7 +17,7 @@ const handleSubmit = (e) => {
     method: 'POST',
     body: encode({
       'form-name': form.getAttribute('name'),
-      ...this.state,
+      
     }),
   })
     .then(() => navigate(form.getAttribute('action')))
