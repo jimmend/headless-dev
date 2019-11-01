@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({
     <div>
       <div className="">
         <div className="front-page">
-          <NewsletterSignup />
+          <NewsletterSignup postId="front-page"/>
           <FeaturedArticle />
           <RecentArticles />
         </div>

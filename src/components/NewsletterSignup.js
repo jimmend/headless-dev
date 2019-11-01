@@ -10,7 +10,7 @@ function encode(data) {
 export default class NewsletterSignup extends React.Component {
   constructor(props) {
     super(props);
-    const postId = props.postId ? props.postId.replace(/\//g,'') : "front-page"
+    const postId = props.postId ? props.postId.replace(/\//g,'') : "post-id-not-provided"
     this.state = { isValidated: false, postId: postId };
   }
 

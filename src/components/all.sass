@@ -8,6 +8,7 @@ $orange: #d97f1138
 $red: #c03b3b
 $light-red: #c03b3b49
 $gray: #00000033
+$light-gray: #00000013
 
 .is-red
   background-color: $red
@@ -59,7 +60,7 @@ $gray: #00000033
 .navbar-burger
   color: #fff
 
-.front-page
+.front-page, .about
   h2
     font-size: 1.75em
     text-align: center
@@ -72,7 +73,7 @@ $gray: #00000033
       font-weight: 300
 
 .featured-article
-  background-color:#00000013
+  background-color: $light-gray
   h2
 
 .section-dark
@@ -191,3 +192,9 @@ footer
 
 .recent-article-sidebar
   margin-bottom: 2rem
+
+.about 
+  .gatsby-image-wrapper
+    display: block !important
+    margin: 2rem auto
+    border-radius: 50%
