@@ -1,20 +1,17 @@
 ---
 templateKey: 'blog-post'
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
+title: The Complete Guide to Gmail Filter Syntax
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false
 author: Jim Mendes
 image: /img/spotlight.jpg
 featuredimage: /img/spotlight.jpg
-maincategory: Email Hacks
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
+maincategory: Gmail Filtration Systems
+description: If you've never used GMail Filters, this guide will show you how. If you have used them, we'll take your game to the next level. Woot!
 tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+  - GMail
+  - EMail
+  - productivity
 ---
 
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.

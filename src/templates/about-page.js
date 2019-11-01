@@ -20,10 +20,22 @@ export const AboutPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-8 is-offset-2">
-              <h2>
+              <h1>
                 <span className="section-title">{title}</span>
-              </h2>
-              <PreviewCompatibleImage imageInfo={imageInfo} />
+              </h1>
+              <PreviewCompatibleImage 
+                imageInfo={imageInfo} 
+                wrapStyles={
+                  {
+                    display: "block", 
+                    margin: "2rem auto", 
+                    borderRadius: "50%", 
+                    border: "2px solid #00000085",
+                    height: "175px",
+                    width: "175px"
+                  }
+                }
+              />
               <PageContent className="content" content={content} />
             </div>
           </div>
@@ -72,7 +84,7 @@ export const aboutPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fixed(width: 175, height: 175) {
+            fixed(width:232, height:232) {
               ...GatsbyImageSharpFixed
             }
           }

@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ imageInfo, orientation = "portrait", hAlign = "center", vAlign = "center"}) => {
+const PreviewCompatibleImage = ({ imageInfo, orientation = "portrait", hAlign = "center", vAlign = "center", wrapStyles = {}}) => {
   
   const { alt = 'alt', childImageSharp, image } = imageInfo
-  const wrapperStyles = (orientation === "landscape") ? { height: "100%" } : {}
+  if (orientation === "landscape") 
+    wrapStyles.height = "100%"
   const imgStyles = { objectPosition: `${hAlign} ${vAlign}`}
 
   if (!!image && !!image.childImageSharp) {
@@ -14,18 +15,18 @@ const PreviewCompatibleImage = ({ imageInfo, orientation = "portrait", hAlign = 
         fixed={image.childImageSharp.fixed || ''} 
         fluid={image.childImageSharp.fluid || ''} 
         alt={alt}
-        style={wrapperStyles}
+        style={wrapStyles}
         imgStyle={imgStyles}
       />
     )
   }
 
   if (!!childImageSharp) {
-    return <Img fluid={childImageSharp.fluid} alt={alt} style={wrapperStyles} imgStyle={imgStyles} />
+    return <Img fluid={childImageSharp.fluid} alt={alt} style={wrapStyles} imgStyle={imgStyles} />
   }
 
   if (!!image && typeof image === 'string')
-    return <img src={image} alt={alt} style={wrapperStyles} />
+    return <img src={image} alt={alt} style={wrapStyles} />
 
   return null
 }
