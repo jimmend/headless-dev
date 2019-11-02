@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: How to Use Outlook Tasks To Organize Your Workflow
+title: "The Flag Method: How to Organize Outlook Tasks and Emails"
 date: 2017-01-04T15:04:10.000Z
 featuredpost: false
 author: Jim Mendes

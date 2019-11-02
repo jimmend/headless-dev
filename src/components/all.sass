@@ -142,9 +142,12 @@ $light-gray: #00000013
     box-shadow: none
   footer
     .navbar
-      margin-bottom: 1rem !important
+      margin-bottom: 0
       .navbar-item
         display: block !important
+      .navbar-item:last-child
+        margin-bottom: 1rem
+
 
 footer
   .navbar
@@ -153,7 +156,6 @@ footer
     text-align: center
     display: block
     width: 100%
-    margin-bottom: 1rem !important
     .navbar-item
       display: inline-block
   .content:not(:last-child)
@@ -204,3 +206,17 @@ footer
 
 .recent-article-sidebar
   margin-bottom: 2rem
+
+.thank-you
+  background-color: $dark-blue
+  height: 90vh
+  h1, p
+    color: #fff
+    text-align: center
+  h1
+    padding: 4rem 2rem 1rem 2rem
+    font-size: 2.5rem
+    font-weight: 600
+  p
+    padding: 0 2rem
+    font-size: 1.5rem

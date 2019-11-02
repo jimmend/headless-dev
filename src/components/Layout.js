@@ -3,15 +3,14 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import ComingSoon from '../components/ComingSoon'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, isLandingPage = false }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div className="">
+    <div>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -50,8 +49,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
-      {/*<ComingSoon />*/}
+      <Footer isLandingPage={isLandingPage} />
     </div>
   )
 }

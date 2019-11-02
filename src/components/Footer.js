@@ -8,8 +8,15 @@ import {Link} from 'gatsby'
 
 const Footer = class extends React.Component {
   render() {
+    const footerStyle = (this.props.isLandingPage) ? {
+      position: "absolute",
+      width: "100%",
+      bottom: "0"
+    } : {}
     return (
-      <footer className="footer has-background-black has-text-white-ter">
+      <footer 
+        className="footer has-background-black has-text-white-ter" 
+        style={footerStyle}>
         <div className="content has-text-centered">
           <img src={logo} alt="jimmendes.com logo" style={{ height: "24px" }} />
         </div>
@@ -17,13 +24,10 @@ const Footer = class extends React.Component {
           <Link className="navbar-item" to="/about">
             about
           </Link>
-          <Link className="navbar-item" to="/contact">
+          <Link className="navbar-item" to="/newsletter">
             newsletter
           </Link>
-          <Link className="navbar-item" to="/contact">
-            resources
-          </Link>
-          <Link className="navbar-item" to="/contact">
+          <Link className="navbar-item" to="/blog">
             blog
           </Link>
         </div>

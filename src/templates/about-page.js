@@ -35,6 +35,11 @@ export const AboutPageTemplate = ({
                     width: "175px"
                   }
                 }
+                imgStyles={
+                  {
+                  borderRadius: "50%"
+                  }
+                }
               />
               <PageContent className="content" content={content} />
             </div>
