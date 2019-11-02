@@ -20,7 +20,6 @@ const PreviewCompatibleImage = (
   if (!!image && !!image.childImageSharp) {
     return (
       <Img
-        fixed={image.childImageSharp.fixed || ''} 
         fluid={image.childImageSharp.fluid || ''} 
         alt={alt}
         style={wrapStyles}

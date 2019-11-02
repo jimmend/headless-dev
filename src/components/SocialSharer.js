@@ -31,7 +31,7 @@ const SocialSharer = (data) => {
     <FacebookShareButton url={url} className="inline">
       <FacebookIcon size={32} round />
     </FacebookShareButton>
-    <PinterestShareButton url={url} className="inline">
+    <PinterestShareButton url={url} className="inline" media="http://www.jimmendes.com/img/samplepin-50.jpg">
       <PinterestIcon size={32} round />
     </PinterestShareButton>
     <TwitterShareButton url={url} className="inline">

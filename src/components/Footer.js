@@ -18,7 +18,9 @@ const Footer = class extends React.Component {
         className="footer has-background-black has-text-white-ter" 
         style={footerStyle}>
         <div className="content has-text-centered">
-          <img src={logo} alt="jimmendes.com logo" style={{ height: "24px" }} />
+          <Link to="/">
+            <img src={logo} alt="jimmendes.com logo" style={{ height: "24px" }} />
+          </Link>
         </div>
         <div className="content navbar has-background-black">
           <Link className="navbar-item" to="/about">
@@ -32,14 +34,29 @@ const Footer = class extends React.Component {
           </Link>
         </div>
         <div className="content has-text-centered">
-          <a className="social-icons" href="https://www.jimmendes.com">
+          <a 
+            className="social-icons" 
+            href="http://www.linkedin.com/in/jimmendes" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={linkedin} alt="linkedin" style={{ height: "20px" }} />
+          </a>
+          <a 
+            className="social-icons" 
+            href="http://www.twitter.com/jimmendes" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={twitter} alt="twitter" style={{ height: "20px" }} />
           </a>
-          <a className="social-icons" href="https://www.jimmendes.com">
+          <a 
+            className="social-icons" 
+            href="http://www.pinterest.com/jimrmendes" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={pinterest} alt="pinterest" style={{ height: "20px" }} />
-          </a>
-          <a className="social-icons" href="https://www.jimmendes.com">
-            <img src={linkedin} alt="linkedin" style={{ height: "20px" }} />
           </a>
         </div>
       </footer>

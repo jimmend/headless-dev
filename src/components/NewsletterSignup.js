@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate } from 'gatsby-link'
+import { Link } from "gatsby";
 
 function encode(data) {
   return Object.keys(data)
@@ -42,9 +43,8 @@ export default class NewsletterSignup extends React.Component {
             <div className="column is-one-quarter-tablet padding-column"></div>
             <div className="column">
               <p>
-                Would you like to be notified when new stuff gets published?
+                <Link className="button is-link" to="/newsletter">Unsure? More info here.</Link>
               </p>
-              <p>Enter your information below.</p>
               <form
                 name={`newsletter-signup-${this.state.postId}`}
                 method="post"
@@ -109,9 +109,6 @@ export default class NewsletterSignup extends React.Component {
                   </button>
                 </div>
               </form>
-              <p className="no-bs">
-                Unsubscribe any time. No junk, spam or BS.
-              </p>
             </div>
             <div className="column is-one-quarter-tablet padding-column"></div>
           </div>

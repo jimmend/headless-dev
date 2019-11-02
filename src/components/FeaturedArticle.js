@@ -70,7 +70,7 @@ const FeaturedArticle = () => {
               <div
                 className="excerpt"
                 dangerouslySetInnerHTML={{
-                  __html: allMarkdownRemark.edges[0].node.excerpt
+                  __html: allMarkdownRemark.edges[0].node.frontmatter.description
                 }}
               ></div>
               <div className="read-more">
