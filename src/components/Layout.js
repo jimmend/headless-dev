@@ -10,7 +10,10 @@ import { withPrefix } from 'gatsby'
 const TemplateWrapper = ({ children, isLandingPage = false }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div style={{
+      minHeight: (isLandingPage) ? "100vh" : "",
+      marginBottom: (isLandingPage) ? "25vh" : "",
+    }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>

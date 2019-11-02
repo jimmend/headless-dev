@@ -12,8 +12,8 @@ class BlogRoll extends React.Component {
       <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <article>
-              <div className="columns horizontal-card blogroll-item">
+            <article className="blogroll-item">
+              <div className="columns is-gapless horizontal-card">
                 <div className="column is-5-widescreen is-5-desktop is-6-tablet card-image">
                   <PreviewCompatibleImage
                     imageInfo={post.frontmatter}

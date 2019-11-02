@@ -1,7 +1,7 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import "~bulma"
 
-$primary-blue: #021373
+$primary-blue: #211373
 $dark-blue: #273A73
 $yellow: #f2a71d3a
 $orange: #d97f1138
@@ -212,27 +212,33 @@ footer
   margin-bottom: 2rem
 
 .thank-you
-  background-color: $dark-blue
-  height: 90vh
-  h1, p
-    color: #fff
-    text-align: center
+  text-align: center
   h1
-    padding: 4rem 2rem 1rem 2rem
+    margin: 0 2rem
     font-size: 2.5rem
     font-weight: 600
   p
     padding: 0 2rem
     font-size: 1.5rem
-
-.blogroll-item:last-child
-  margin: 0
-  padding: 2rem 0
-  border-bottom: 1px solid $orange
+  img
+    margin-top: 2rem
 
 .blog
-  .content
-    border-top: 1px solid $orange
-  .horizontal-card 
-    .card-content
-      padding 0 2rem
+  background-color: $orange
+
+section
+  margin-bottom: 0
+
+.blogroll-item
+  margin-bottom: 2rem
+
+.not-found
+  text-align: center
+  h1
+    font-size: 3rem
+    font-weight: 600
+    margin: 0 2rem
+  p
+    font-size: 1.5rem
+  img
+    margin-top: 2rem

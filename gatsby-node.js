@@ -35,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
+        //tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -46,7 +46,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    // Tag pages:
+/*     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(edge => {
@@ -68,7 +68,7 @@ exports.createPages = ({ actions, graphql }) => {
           tag,
         },
       })
-    })
+    }) */
   })
 }
 
