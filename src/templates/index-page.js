@@ -7,9 +7,7 @@ import NewsletterSignup from '../components/NewsletterSignup'
 import FeaturedArticle from '../components/FeaturedArticle'
 import RecentArticles from '../components/RecentArticles'
 
-export const IndexPageTemplate = ({
-  featuredStories,
-}) => (
+export const IndexPageTemplate = () => (
     <div>
       <div className="">
         <div className="front-page">
@@ -23,7 +21,6 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   title: PropTypes.string,
-  featuredStories: PropTypes.array,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -35,7 +32,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        featuredStories={frontmatter.featuredStories}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -63,10 +59,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        featuredStories {
-          title
-          text
-        }
       }
     }
   }
