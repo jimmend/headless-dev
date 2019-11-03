@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'jimmendes.com | Entrepreneurship, Personal Productivity and...Stuff',
+    title: 'jimmendes.com | Personal Productivity and...Stuff',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      "A site dedicated to providing you with useful tips and tricks that make your life maybe a little bit better and a little easier.",
     author: "Jim Mendes",
     siteUrl: "https://www.jimmendes.com"
   },
