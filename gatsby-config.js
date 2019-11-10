@@ -100,22 +100,59 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({query: { site, allMarkdownRemark } }) => {
+            output: '/newsletter/rss.xml',
+            title: 'jimmendes.com Daily Newsletter RSS feed',
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { 
+                    frontmatter: {
+                      maincategory: { eq: "Daily Newsletter" }
+                    } 
+                  }
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                        quotee
+                        quote
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            serialize: ( { query: { site, allMarkdownRemark } } ) => {
               return allMarkdownRemark.edges.map(edge => {
+                const quote = '<div style="margin: 2rem 0.5rem; padding: 2rem 4rem; background-color: #273A73; text-align: center; color: #ffffff;"><p style="font-weight: 600; font-size: 1.25rem;">' + edge.node.frontmatter.quote + '</p><p style="text-align: right;">' + edge.node.frontmatter.quotee + '</p></div>'
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
+                  custom_elements: [ { "content:encoded": quote + edge.node.html } ]
                 })
               })
-            },
+            }
+          },
+          {
+            output: '/blog/rss.xml',
+            title: 'jimmendes.com Blog RSS feed',
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date]},
-                  filter: {frontmatter: {templateKey: {eq: "blog-post"}}}
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { 
+                    frontmatter: { 
+                      templateKey: { eq: "blog-post" },
+                      maincategory: { ne: "Daily Newsletter" }
+                    } 
+                  }
                 ) {
                   edges {
                     node {
@@ -131,8 +168,17 @@ module.exports = {
                 }
               }
             `,
-            output: '/feed.xml',
-            title: 'jimmendes.com RSS feed'
+            serialize: ({query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                })
+              })
+            },
           }
         ],
       }
