@@ -9,7 +9,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import BlogSidebar from "../components/BlogSidebar";
 import SocialSharer from '../components/SocialSharer'
-import Quote from '../components/Quote'
 
 export const BlogPostTemplate = ({
   content,
@@ -23,7 +22,6 @@ export const BlogPostTemplate = ({
   imageInfo,
   slug,
   id,
-  quotee,
   quote
 }) => {
   const PostContent = contentComponent || Content;
@@ -44,7 +42,6 @@ export const BlogPostTemplate = ({
                 <p className="byline">
                   By {author} | {date}
                 </p>
-                {(quotee) && <Quote quotee={quotee} quote={quote} />}
                 <PostContent content={content} />
                 {/* {tags && tags.length ? (
                   <div style={{ marginTop: `4rem` }}>
@@ -81,8 +78,6 @@ BlogPostTemplate.propTypes = {
   date: PropTypes.string,
   slug: PropTypes.string,
   id: PropTypes.string,
-  quotee: PropTypes.string,
-  quote: PropTypes.string,
 };
 
 const BlogPost = ({ data }) => {
@@ -110,8 +105,6 @@ const BlogPost = ({ data }) => {
         date={post.frontmatter.date}
         slug={post.fields.slug}
         id={post.id}
-        quotee={post.frontmatter.quotee}
-        quote={post.frontmatter.quote}
       />
     </Layout>
   );
@@ -146,8 +139,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        quotee
-        quote
       }
     }
   }

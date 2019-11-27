@@ -99,7 +99,7 @@ module.exports = {
           }
         `,
         feeds: [
-          {
+/*           {
             output: '/newsletter/rss.xml',
             title: 'jimmendes.com Daily Newsletter RSS feed',
             query: `
@@ -140,7 +140,7 @@ module.exports = {
               })
             }
           },
-          {
+ */          {
             output: '/blog/rss.xml',
             title: 'jimmendes.com Blog RSS feed',
             query: `
