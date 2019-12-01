@@ -21,6 +21,18 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "quote"
+    label: "Quote"
+    folder: "src/pages/quotes/{{author}}"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      -  {label: "Template Key", name: "templateKey", widget: "hidden", default: "quote"}
+      -  {label: "Author", name: "author", widget: "string"}
+      -  {label: "Title", name: "title", widget: "string"}
+      -  {label: "Image", name: "image", widget: "image"}
+      -  {label: "Body", name: "body", widget: "markdown"}
+
   - name: "pages"
     label: "Pages"
     files:
