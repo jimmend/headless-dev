@@ -1,10 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import { graphql } from "gatsby";
 
 export const motivationalQuotesQuery = graphql`
     query MotivationalQuotesQuery {

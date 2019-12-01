@@ -26,11 +26,11 @@ const Footer = class extends React.Component {
           <Link className="navbar-item" to="/about">
             about
           </Link>
-{/*           <Link className="navbar-item" to="/newsletter">
-            newsletter
-          </Link> */}
           <Link className="navbar-item" to="/blog">
             blog
+          </Link>
+          <Link className="navbar-item" to="/quotes/charles-swindol/life-is-how-you-react-to-it/">
+            quotes
           </Link>
         </div>
         <div className="content has-text-centered">
