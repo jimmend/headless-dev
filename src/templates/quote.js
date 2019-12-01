@@ -135,21 +135,3 @@ const QuotePage = ({ data, location }) => {
 };
 
 export default QuotePage;
-
-/*
-
-<Link to={pages[previous].node.path}>
-              <img style={styles.arrow} src={left} alt="Left arrow" />
-            </Link>
-            <div style={styles.card}>
-              <div
-                style={styles.quote}
-                dangerouslySetInnerHTML={{ __html: quote.html }}
-              ></div>
-              <div style={styles.author}>{quote.frontmatter.author}</div>
-            </div>
-            <Link to={pages[next].node.path}>
-              <img style={styles.arrow} src={right} alt="Left arrow" />
-            </Link>
-
-*/

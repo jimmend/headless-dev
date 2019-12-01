@@ -23,9 +23,9 @@ collections:
 
   - name: "quote"
     label: "Quote"
-    folder: "src/pages/quotes/{{author}}"
+    folder: "src/pages/quotes"
     create: true
-    slug: "{{slug}}"
+    slug: "{{author}}-{{slug}}"
     fields:
       -  {label: "Template Key", name: "templateKey", widget: "hidden", default: "quote"}
       -  {label: "Author", name: "author", widget: "string"}
