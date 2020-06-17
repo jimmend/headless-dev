@@ -1,4 +1,2 @@
-[[headers]]
-for = "/static/*"
-[headers.values]
+/static/*
 Cache-Control = "public, max-age=360000"

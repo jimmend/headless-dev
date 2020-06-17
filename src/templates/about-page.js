@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
@@ -46,9 +47,9 @@ export const AboutPageTemplate = ({
           </div>
         </div>
       </section>
-      <section>
+      {/* <section>
         <NewsletterSignUp postId="about" />
-      </section>
+      </section> */}
     </div>
   );
 };

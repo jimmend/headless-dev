@@ -6,20 +6,36 @@ image: /img/headshot.jpg
 ---
 That guy up there is me.  Jim Mendes.
 
-Maybe you figured that out already. But, if not, that's cool. We all have a lot of stuff on our minds these days. Sometimes we miss some of the facts. This can't be avoided. And we shouldn't feel bad.
-
-If you're interested in my professional history, check out [my LinkedIn page](http://www.linkedin.com/in/jimmendes), which is relatively up-to-date. I spent a good amount of time on that thing, so it makes me feel good when someone reads it. On the other hand, I sometimes get those weird emails from LinkedIn saying that someone has looked at my profile in "Private Mode." If you're going to go over there and look at my profile, at least have the decency to NOT do it in Private Mode. Private Mode is just creepy. You're better than that.
+Maybe you figured that out already.  
 
 ## The Purpose of this Site
 
-As those that know me will tell you, one of the defining traits of my personality is crippling laziness. Fortunately (for you!) one of the by-products of this massive lack of desire to do work is that my mind works very hard (see the irony) to figure out the simplest, quickest way to accomplish any task.
+We've all been there.  That annoying spreadsheet that YOU KNOW is going to eat up half your day.  
 
-These days they call it working smarter, not harder.
+Of course, if you're lucky, there's that one person in your office that's pretty good with Excel.  You're hoping they'll be able to help you shave some time off that four hours.
 
-The purpose of this site is to give me a place to document the little tips and tricks I've developed over the years that have helped me lead a relatively organized and productive life (despite the aforementioned crippling laziness).
+For a lot of people, I'm that person.
 
-By putting all of this (CONTENT!) stuff on a website, it avoids my having to explain it to each of you individually. 
+When I first started working in an office, I remember using my break time to explore the computer programs, like some kind of freak.  
 
-That's me working smarter, not harder.
+I would go into every menu in Excel and click on everything to see what each command did (now, we have a ribbon with all the little icons to click on).  I did this with Excel.  With Word.  With Outlook.  With Notepad.  With every Windows Settings page.  
 
-See.
+I used to enter "=" into an Excel sheet and then go through all of the formulas.
+
+Not sure why I did these things.  I was looking for truth in there, or something.
+
+In any case, the effect all of that wasted time had was to make me pretty good with Excel (and Word...and Outlook...pretty much any program on my work computer when I was bored).
+
+That guy, remember.
+
+So the purpose of this site is to pass on some of what I've learned over the years.  To SCALE the advice that I've been giving to co-workers.
+
+So here I am.  Now I'm your that guy.
+
+Hope you enjoy yourself here.  And maybe learn something in the process.
+
+If you're interested in my professional history, check out [my LinkedIn page](http://www.linkedin.com/in/jimmendes). 
+
+Also, feel free to drop me an email.  jim at jimmmendes dot com.  I read all of my email.
+
+Jim Mendes
